@@ -1,0 +1,119 @@
+-----------------------------------------ADMIN DATA----------------------------------------------
+
+			std::vector<std::string> AdminData;
+			std::ifstream rdr;
+			rdr.open("AdminData.txt");
+			while (!rdr.eof()) {
+				std::string str;
+				rdr >> str;
+				AdminData.push_back(str);
+			}
+			rdr.close();
+			std::ofstream wtr;
+			wtr.open("AdminData.txt");
+			for (int i = 0; i < AdminData.size(); i++) {
+				wtr << "----";
+				wtr << AdminData[i];
+				wtr << "\n";
+			}
+			wtr.close();
+			MessageBox::Show("Hehe");
+
+----------------------------------------STUDENT DATA---------------------------------------------
+
+			std::vector<std::string> StdName;
+			std::vector<std::string> StdRoll;
+			std::vector<std::string> StdC1;
+			std::vector<std::string> StdC2;
+			std::vector<std::string> StdC3;
+			std::vector<std::string> StdC4;
+			std::vector<std::string> StdC5;
+			std::vector<std::string> StdPer;
+			std::vector<std::string> StdGrade;
+			std::vector<std::string> StdPass;
+			std::ifstream rdr;
+			rdr.open("student.txt");
+			while (!rdr.eof()) {
+				std::string str;
+				rdr >> str;
+				StdName.push_back(str);
+				rdr >> str;
+				StdRoll.push_back(str);
+				rdr >> str;
+				StdC1.push_back(str);
+				rdr >> str;
+				StdC2.push_back(str);
+				rdr >> str;
+				StdC3.push_back(str);
+				rdr >> str;
+				StdC4.push_back(str);
+				rdr >> str;
+				StdC5.push_back(str);
+				rdr >> str;
+				StdPer.push_back(str);
+				rdr >> str;
+				StdGrade.push_back(str);
+				rdr >> str;
+				StdPass.push_back(str);
+			}
+			rdr.close();
+			std::ofstream wtr;
+			wtr.open("student.txt");
+			for (int i = 0; i < StdRoll.size(); i++) {
+				wtr << "----";
+				wtr << StdName[i];
+				wtr << " ";
+				wtr << StdRoll[i];
+				wtr << " ";
+				wtr << StdC1[i];
+				wtr << " ";
+				wtr << StdC2[i];
+				wtr << " ";
+				wtr << StdC3[i];
+				wtr << " ";
+				wtr << StdC4[i];
+				wtr << " ";
+				wtr << StdC5[i];
+				wtr << " ";
+				wtr << StdPer[i];
+				wtr << " ";
+				wtr << StdGrade[i];
+				wtr << " ";
+				wtr << StdPass[i];
+				wtr << "\n";
+			}
+			wtr.close();
+			MessageBox::Show("Hehe");
+
+----------------------------------------FACULTY DATA---------------------------------------------
+
+			std::vector<std::string> FacName;
+			std::vector<std::string> FacPass;
+			std::vector<std::string> FacSubj;
+			std::ifstream rdr;
+			rdr.open("FacData.txt");
+			while (!rdr.eof()) {
+				std::string str;
+				rdr >> str;
+				FacName.push_back(str);
+				rdr >> str;
+				FacPass.push_back(str);
+				rdr >> str;
+				FacSubj.push_back(str);
+			}
+			rdr.close();
+			std::ofstream wtr;
+			wtr.open("FacData.txt");
+			for (int i = 0; i < FacName.size(); i++) {
+				wtr << "----";
+				wtr << FacName[i];
+				wtr << " ";
+				wtr << FacPass[i];
+				wtr << " ";
+				wtr << FacSubj[i];
+				wtr << "\n";
+			}
+			wtr.close();
+			MessageBox::Show("Hehe");
+
+-------------------------------------------------------------------------------------------------
